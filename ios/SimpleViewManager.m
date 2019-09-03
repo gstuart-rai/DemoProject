@@ -19,7 +19,7 @@
 
 // Export a native module
 // https://facebook.github.io/react-native/docs/native-modules-ios.html
-RCT_EXPORT_MODULE(SimpleView);
+RCT_EXPORT_MODULE();
 
 // Return the native view that represents your React component
 - (UIView *)view

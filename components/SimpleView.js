@@ -2,7 +2,7 @@
 //  Created by react-native-create-bridge
 
 import React from 'react';
-import {requireNativeComponent} from 'react-native';
+import {requireNativeComponent, DeviceEventEmitter} from 'react-native';
 
 const SimpleViewNative = requireNativeComponent('SimpleView');
 

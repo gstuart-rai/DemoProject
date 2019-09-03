@@ -3,7 +3,6 @@
 package com.demoproject.simpleview;
 
 import com.facebook.react.ReactPackage;
-import com.facebook.react.bridge.JavaScriptModule;
 import com.facebook.react.bridge.NativeModule;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.uimanager.ViewManager;
@@ -23,7 +22,7 @@ public class SimpleViewPackage implements ReactPackage {
         // Register your native component's view manager
         // https://facebook.github.io/react-native/docs/native-components-android.html#4-register-the-viewmanager
         return Arrays.<ViewManager>asList(
-            new SimpleViewManager()
+            new SimpleNativeViewManager()
         );
     }
 }

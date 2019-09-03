@@ -7,10 +7,11 @@ import {
   ActivityIndicator,
   SafeAreaView,
 } from 'react-native';
-import MapView, {Marker} from 'react-native-maps';
+import MapView, { Marker } from 'react-native-maps';
 
 // You can import from local files
 import ActionButton from './components/ActionButton';
+import SimpleView from './components/SimpleView';
 import Colors from './Colors';
 
 export default class App extends React.Component {
@@ -20,7 +21,7 @@ export default class App extends React.Component {
   };
 
   fetchLocation = () => {
-    this.setState({fetching: true}, () => {
+    this.setState({ fetching: true }, () => {
       setTimeout(() => {
         fetch('https://ipinfo.io/', {
           method: 'GET',
@@ -30,10 +31,10 @@ export default class App extends React.Component {
         })
           .then(response => response.json())
           .then(json => {
-            this.setState({location: json})
+            this.setState({ location: json })
           })
           .catch(ex => console.error(ex))
-          .finally(() => this.setState({fetching: false}));
+          .finally(() => this.setState({ fetching: false }));
       }, 1500);
     });
   };
@@ -43,7 +44,7 @@ export default class App extends React.Component {
   };
 
   didTapClearButton = () => {
-    this.setState({location: null});
+    this.setState({ location: null });
   };
 
   render() {
@@ -52,7 +53,7 @@ export default class App extends React.Component {
     let mapRegion;
     let mapMarker;
     if (this.state.location) {
-      const {city, region, loc} = this.state.location;
+      const { city, region, loc } = this.state.location;
       message = `You appear to be in ${city}, ${region}`;
 
       const [latString, lngString] = loc.split(',');
@@ -66,7 +67,7 @@ export default class App extends React.Component {
       };
 
       mapMarker = (
-        <Marker coordinate={{latitude, longitude}} description={`${loc}`} />
+        <Marker coordinate={{ latitude, longitude }} description={`${loc}`} />
       );
     }
 
@@ -83,6 +84,15 @@ export default class App extends React.Component {
           region={mapRegion}>
           {mapMarker}
         </MapView>
+        <SimpleView
+          style={styles.nativeView}
+          title={
+            this.state.location?.loc
+              ? `${this.state.location?.loc}`
+              : 'Hello again...'
+          }
+          onClearTapped={this.didTapClearButton}
+        />
         <View style={styles.textView}>
           <Text style={styles.paragraph}>{message}</Text>
           <Text style={styles.paragraph}>{messageFromBeyond}</Text>
@@ -125,6 +135,10 @@ const styles = StyleSheet.create({
     }),
     backgroundColor: Colors.bgGrey,
     padding: 8,
+  },
+  nativeView: {
+    width: '100%',
+    height: 120,
   },
   spinner: {
     margin: 12,

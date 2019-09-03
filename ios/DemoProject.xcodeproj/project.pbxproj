@@ -18,6 +18,9 @@
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* DemoProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* DemoProjectTests.m */; };
 		8C84DE971C97EBA7F5B74467 /* libPods-DemoProjectTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7DD286D21EEE9EB6A998458 /* libPods-DemoProjectTests.a */; };
+		9BC0DBB9231EB6AA00A47178 /* SimpleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BC0DBB7231EB6AA00A47178 /* SimpleView.m */; };
+		9BC0DBBA231EB6AA00A47178 /* SimpleViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BC0DBB8231EB6AA00A47178 /* SimpleViewManager.m */; };
+		9BC0DBBC231EB73300A47178 /* SimpleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BC0DBBB231EB73300A47178 /* SimpleView.xib */; };
 		E66E36EC298FBDBB3A2CD4B6 /* libPods-DemoProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A530F0C3BBB70DEEF963630D /* libPods-DemoProject.a */; };
 		F4972872F695AF284EE2D99E /* libPods-DemoProject-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DE4CE2CB7E3C89843D57DE5 /* libPods-DemoProject-tvOSTests.a */; };
 /* End PBXBuildFile section */
@@ -58,6 +61,11 @@
 		3886EA1BC98670B167EF95FF /* Pods-DemoProject-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoProject-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-DemoProject-tvOSTests/Pods-DemoProject-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6E7557697195B04BD3EFE024 /* Pods-DemoProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoProjectTests.release.xcconfig"; path = "Target Support Files/Pods-DemoProjectTests/Pods-DemoProjectTests.release.xcconfig"; sourceTree = "<group>"; };
 		708149D7C2E53A788973F790 /* Pods-DemoProject-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoProject-tvOS.release.xcconfig"; path = "Target Support Files/Pods-DemoProject-tvOS/Pods-DemoProject-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		9BC0DBB5231EB6AA00A47178 /* SimpleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleView.h; sourceTree = "<group>"; };
+		9BC0DBB6231EB6AA00A47178 /* SimpleViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleViewManager.h; sourceTree = "<group>"; };
+		9BC0DBB7231EB6AA00A47178 /* SimpleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleView.m; sourceTree = "<group>"; };
+		9BC0DBB8231EB6AA00A47178 /* SimpleViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleViewManager.m; sourceTree = "<group>"; };
+		9BC0DBBB231EB73300A47178 /* SimpleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleView.xib; sourceTree = "<group>"; };
 		9DE4CE2CB7E3C89843D57DE5 /* libPods-DemoProject-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DemoProject-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A530F0C3BBB70DEEF963630D /* libPods-DemoProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DemoProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA32C78CCBB9D26A56EFCD2C /* Pods-DemoProject-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoProject-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-DemoProject-tvOSTests/Pods-DemoProject-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -125,6 +133,7 @@
 		13B07FAE1A68108700A75B9A /* DemoProject */ = {
 			isa = PBXGroup;
 			children = (
+				9BC0DBB4231EB69B00A47178 /* SimpleView */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -182,6 +191,18 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		9BC0DBB4231EB69B00A47178 /* SimpleView */ = {
+			isa = PBXGroup;
+			children = (
+				9BC0DBB5231EB6AA00A47178 /* SimpleView.h */,
+				9BC0DBB7231EB6AA00A47178 /* SimpleView.m */,
+				9BC0DBB6231EB6AA00A47178 /* SimpleViewManager.h */,
+				9BC0DBB8231EB6AA00A47178 /* SimpleViewManager.m */,
+				9BC0DBBB231EB73300A47178 /* SimpleView.xib */,
+			);
+			name = SimpleView;
+			sourceTree = "<group>";
+		};
 		C6FC7722E622C50BC71DA844 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -194,7 +215,6 @@
 				05250A35320FD84CB68F51AF /* Pods-DemoProjectTests.debug.xcconfig */,
 				6E7557697195B04BD3EFE024 /* Pods-DemoProjectTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -308,6 +328,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -336,6 +357,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BC0DBBC231EB73300A47178 /* SimpleView.xib in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 			);
@@ -530,6 +552,8 @@
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				9BC0DBBA231EB6AA00A47178 /* SimpleViewManager.m in Sources */,
+				9BC0DBB9231EB6AA00A47178 /* SimpleView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
